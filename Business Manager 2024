@@ -1,0 +1,40 @@
+\/\/ Set up variables
+let money = 10000;
+let employeeCount = 0;
+
+\/\/ Set up functions
+function startGame() {
+  alert("Welcome to Business Manager 2024! You have $10,000 to start your business.");
+}
+
+function hireEmployee() {
+  if (money >= 5000) {
+    employeeCount++;
+    money -= 5000;
+    alert("You hired a new employee! You now have " + employeeCount + " employees.");
+  } else {
+    alert("You don't have enough money to hire a new employee.")
+  }
+}
+
+function releaseEmployee() {
+  if (employeeCount > 0) {
+    employeeCount--;
+    money += 2000;
+    alert("You released an employee! You now have " + employeeCount + " employees.");
+  } else {
+    alert("You don't have any employees to release.")
+  }
+}
+
+function promoteEmployee() {
+  if (employeeCount > 0) {
+    money += 5000;
+    alert("You promoted an employee! You now have " + money + " dollars.");
+  } else {
+    alert("You don't have any employees to promote.")
+  }
+}
+
+\/\/ Call the startGame function to begin the game
+startGame();
